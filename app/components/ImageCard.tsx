@@ -15,7 +15,12 @@ const ImageCard = ({ src }: { src: string }) => {
         }}
         className="relative overflow-hidden shadow-lg w-[450px] h-[380px] rounded-lg"
       >
-        <img src={src} alt="Image Description" className="h-full w-full" />
+        <img
+          src={src}
+          alt="Image Description"
+          className="h-full w-full"
+          loading="lazy"
+        />
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileHover={{ opacity: 1, scale: 1 }}
@@ -43,7 +48,7 @@ const ImageCard = ({ src }: { src: string }) => {
             "linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 30%, transparent 100%)",
         }}
       >
-        <img src={src} alt="" className="h-full w-full" />
+        <img src={src} alt="" className="h-full w-full" loading="eager" />
       </div>
     </div>
   );
